@@ -5,88 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Trang Thông Tin Đơn Vị</title>
 <style>
-* {margin:0; padding:0; box-sizing:border-box;}
-html, body {
-  height: auto;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('image.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #000;
-  padding-top: 120px; /* Đẩy toàn bộ nội dung xuống dưới header */
-}
-header {
-  background: rgba(255,255,255,0.8);
-  padding: 20px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  color: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-header h1 {font-size:1.8rem; margin-bottom: 10px;}
-.login-btn {
-  background: #003366;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.login-btn:hover {background: #0055aa;}
-section {
-  max-width: 900px;
-  margin: 0 auto 30px;
-  padding: 10px;
-}
-.card {
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
-  padding: 25px;
-  margin: 20px 0;
-  border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-  color: #000;
-}
-.card:hover {transform: translateY(-5px);}
-h2 {color: #000; margin-bottom: 15px;}
-p, ul {line-height:1.6; color: #000;}
-ul li {margin-bottom:8px;}
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-}
-.video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-@media (max-width:600px){
-  body {padding-top: 140px;}
-  header h1 {font-size:1.4rem;}
-  .card {padding:15px; margin:15px 10px;}
-}
+  * {margin:0; padding:0; box-sizing:border-box;}
+  html, body {height:auto; min-height:100vh; overflow-x:hidden;}
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+    padding-top: 120px;
+  }
+  header {
+    background: rgba(255,255,255,0.88);
+    padding: 18px 10px;
+    text-align: center;
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  header h1 {font-size:1.8rem; margin-bottom:10px; color:#000;}
+  .login-btn {
+    background:#003366; color:#fff; padding:10px 20px; border:none; border-radius:6px;
+    font-weight:bold; cursor:pointer;
+  }
+  .login-btn:hover {background:#0055aa;}
+  section {max-width:900px; margin:0 auto 50px; padding:10px;}
+  .card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    padding: 28px;
+    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    background: rgba(255,255,255,0.9);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+  }
+  h2 {color:#000; text-align:center; margin-bottom:18px; font-size:1.6rem; font-weight:bold;}
+  p, ul {line-height:1.8; font-size:1.1rem; color:#000;}
+  ul {padding-left:30px;}
+  li {margin:12px 0;}
+  .video-wrapper {
+    position:relative; padding-bottom:56.25%; height:0; overflow:hidden;
+    border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.3);
+  }
+  .video-wrapper iframe {
+    position:absolute; top:0; left:0; width:100%; height:100%; border:none;
+  }
+  @media (max-width:600px){
+    body {padding-top:140px;}
+    header h1 {font-size:1.4rem;}
+    .login-btn {padding:8px 16px;}
+    .card {padding:20px; margin:20px 10px;}
+    h2 {font-size:1.4rem;}
+    p, ul {font-size:1rem;}
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Trang Thông Tin Tuyên Truyền Đơn Vị Tiểu đoàn 158 - Vùng 1 Hải quân</h1>
+  <h1>Trang Thông Tin Tuyên Truyền Đơn Vị<br>Tiểu đoàn 158 - Vùng 1 Hải quân</h1>
   <button class="login-btn" onclick="window.location.href='login.html'">Đăng nhập quản lý</button>
 </header>
 
@@ -108,10 +93,9 @@ ul li {margin-bottom:8px;}
   <div class="card">
     <h2>Video giới thiệu</h2>
     <div class="video-wrapper">
-      <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftuan.thuy.14%2Fvideos%2F1483160409364510%2F%3Fidorvanity%3D683689703421628&show_text=false&width=560&t=0" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-              allowfullscreen="true" allowFullScreen="true">
-      </iframe>
+      <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftuan.thuy.14%2Fvideos%2F1483160409364510%2F%3Fidorvanity%3D683689703421628&show_text=false&width=560&t=0"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowfullscreen="true" allowFullScreen="true"></iframe>
     </div>
   </div>
 </section>
@@ -124,85 +108,108 @@ ul li {margin-bottom:8px;}
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Đăng ký vào thăm</title>
 <style>
-body {
-  font-family: 'Arial', sans-serif;
-  background: url('image.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #000;
-  min-height: 100vh;
-  padding-top: 80px; /* Đẩy form xuống dưới */
-}
-.container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: blur(12px);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  color: #000;
-}
-h2 {text-align:center; margin-bottom: 25px; color:#000;}
-label {display:block; font-weight:bold; margin-top:15px; color:#000;}
-input, select {
-  width:100%;
-  padding:12px;
-  margin-top:6px;
-  border-radius:10px;
-  border:1px solid rgba(0,0,0,0.3);
-  background: rgba(255,255,255,0.3);
-  color: #000;
-}
-input::placeholder {color: #333;}
-button {
-  width:100%;
-  padding:15px;
-  margin-top:20px;
-  border:none;
-  border-radius:10px;
-  background:#003366;
-  color:#fff;
-  font-size:16px;
-  cursor:pointer;
-  transition: background 0.3s ease;
-}
-button:hover {background:#0055aa;}
-#status {text-align:center; margin-top:15px; font-weight:bold; color:#000;}
-@media(max-width:600px){
-  body {padding-top: 100px;}
-  .container {padding:20px; margin:20px 10px;}
-  input, select {padding:10px;}
-  button {padding:12px; font-size:14px;}
-}
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+    min-height: 100vh;
+    padding-top: 80px;
+    margin: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 18px;
+    color: #000;
+  }
+  input, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.7);
+    color: #000;
+    font-size: 1rem;
+  }
+  input::placeholder {color: #555;}
+  button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    background: #003366;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {background: #0055aa;}
+  #status {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+  }
+  @media (max-width:600px){
+    body {padding-top: 100px;}
+    .container {padding:25px; margin:20px 15px;}
+    h2 {font-size:1.5rem;}
+    input, select {padding:12px;}
+    button {padding:14px; font-size:1.1rem;}
+  }
 </style>
 </head>
 <body>
 <div class="container">
-<h2>Đăng ký vào thăm quân nhân</h2>
-<form id="visitForm">
-  <label>Họ tên khách:</label>
-  <input type="text" id="hoten" placeholder="Nhập họ tên" required />
-  <label>Số CCCD:</label>
-  <input type="text" id="cccd" placeholder="Nhập CCCD" required />
-  <label>Mối quan hệ:</label>
-  <input type="text" id="quanhe" placeholder="Nhập quan hệ" required />
-  <label>Tên quân nhân muốn thăm:</label>
-  <input type="text" id="quannhan" placeholder="Nhập tên quân nhân" required />
-  <label>Số điện thoại:</label>
-  <input type="text" id="sdt" placeholder="Nhập số điện thoại" required />
-  <label>Tỉnh/Thành phố:</label>
-  <select id="tinhthanh" required>
-    <option value="">Chọn tỉnh/thành</option>
-    <option value="Hà Nội">Hà Nội</option>
-    <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
-    <option value="Hải Phòng">Hải Phòng</option>
-    <option value="Đà Nẵng">Đà Nẵng</option>
-    <option value="Cần Thơ">Cần Thơ</option>
-  </select>
-  <button type="submit">Gửi đăng ký</button>
-</form>
-<p id="status"></p>
+  <h2>Đăng ký vào thăm quân nhân</h2>
+  <form id="visitForm">
+    <label>Họ tên khách:</label>
+    <input type="text" id="hoten" placeholder="Nhập họ tên" required />
+    <label>Số CCCD:</label>
+    <input type="text" id="cccd" placeholder="Nhập CCCD" required />
+    <label>Mối quan hệ:</label>
+    <input type="text" id="quanhe" placeholder="Nhập quan hệ" required />
+    <label>Tên quân nhân muốn thăm:</label>
+    <input type="text" id="quannhan" placeholder="Nhập tên quân nhân" required />
+    <label>Số điện thoại:</label>
+    <input type="text" id="sdt" placeholder="Nhập số điện thoại" required />
+    <label>Tỉnh/Thành phố:</label>
+    <select id="tinhthanh" required>
+      <option value="">Chọn tỉnh/thành</option>
+      <option value="Hà Nội">Hà Nội</option>
+      <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+      <option value="Hải Phòng">Hải Phòng</option>
+      <option value="Đà Nẵng">Đà Nẵng</option>
+      <option value="Cần Thơ">Cần Thơ</option>
+    </select>
+    <button type="submit">Gửi đăng ký</button>
+  </form>
+  <p id="status"></p>
 </div>
+
 <script>
 const API_URL = "https://script.google.com/macros/s/AKfycbzaZE7tTJgbtK6h6Z7CUGfkP2yi8oAHPnME_zhguwnRtfXKmqRLAU7F-Nz2cMt18M2xag/exec";
 document.getElementById("visitForm").addEventListener("submit", async function(e){
