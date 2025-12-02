@@ -9,15 +9,11 @@
   html, body {height: auto; min-height: 100vh; overflow-x: hidden;}
   body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(rgba(0,30,100,0.92), rgba(0,0,0,0.85)), url('image.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0,30,100,0.92), rgba(0,0,0,0.88)), 
+                url('image.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     padding-top: 100px;
-  }
-  body::before {
-    content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, #001f3f, #003366);
-    z-index: -1;
   }
   header {
     background: rgba(0,51,102,0.98);
@@ -105,7 +101,6 @@
 <title>Đăng ký thăm quân nhân</title>
 <style>
   body {margin:0; font-family:Arial; background:linear-gradient(rgba(0,30,100,0.9),rgba(0,0,0,0.8)),url('image.jpg') fixed center/cover; color:#fff; min-height:100vh; display:flex; align-items:center; justify-content:center;}
-  body::before {content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:linear-gradient(135deg,#001f3f,#003366); z-index:-1;}
   .container {background:rgba(255,255,255,0.15); backdrop-filter:blur(12px); padding:30px; border-radius:20px; width:90%; max-width:500px; box-shadow:0 10px 30px rgba(0,0,0,0.6);}
   h2 {text-align:center; margin-bottom:25px;}
   label {display:block; margin:15px 0 5px; font-weight:bold;}
@@ -129,7 +124,7 @@
     <select id="tinhthanh" required>
       <option value="">Chọn tỉnh/thành</option>
       <option>Hà Nội</option><option>TP. Hồ Chí Minh</option><option>Hải Phòng</option>
-      <!-- Thêm tỉnh khác nếu cần -->
+      <option>Đà Nẵng</option><option>Cần Thơ</option>
     </select>
     <button type="submit">Gửi đăng ký</button>
   </form>
